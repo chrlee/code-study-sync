@@ -1,6 +1,7 @@
-import { sampleFunction } from '@src/sampleFunction';
+import { initLeetCodeMonitoring } from '@src/leetcode';
 
 console.log('content script loaded');
 
-// Shows how to call a function defined in another module
-sampleFunction();
+if (window.location.hostname.includes('leetcode.com')) {
+  initLeetCodeMonitoring();
+}
